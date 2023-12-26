@@ -3,7 +3,8 @@ from fake_useragent import UserAgent
 import lxml.etree
 import re
 
-cookies = {'did': 'web_50a6d089a9d08c2e42ed768f997af787'}
+
+cookies = {'did': "web_43466e2e01d1c34860f4216f28e5cd11"}
 
 headers = {
     'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
@@ -45,3 +46,6 @@ def get_photoId(html_body: str) -> str:
 def analyze_kuaishou():
     share_url = "https://www.kuaishou.com/f/X-6ew1IHeJ6gJ1fl"
     return get_video_link(get_real_html(share_url))
+
+if __name__ == "__main__":
+    print(analyze_kuaishou())
